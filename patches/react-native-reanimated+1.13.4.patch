@@ -1,0 +1,14 @@
+diff --git a/node_modules/react-native-reanimated/android/build.gradle b/node_modules/react-native-reanimated/android/build.gradle
+index 90b206e..0ddf808 100644
+--- a/node_modules/react-native-reanimated/android/build.gradle
++++ b/node_modules/react-native-reanimated/android/build.gradle
+@@ -61,7 +61,8 @@ afterEvaluate { project ->
+     task androidJavadoc(type: Javadoc) {
+         source = android.sourceSets.main.java.srcDirs
+         classpath += files(android.bootClasspath)
+-        classpath += files(project.getConfigurations().getByName('compile').asList())
++        project.getConfigurations().getByName('implementation').setCanBeResolved(true)
++        classpath += files(project.getConfigurations().getByName('implementation').asList())
+         include '**/*.java'
+     }
+ 

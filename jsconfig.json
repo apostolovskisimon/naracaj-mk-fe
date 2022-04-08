@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
+    "checkJs": false,
+    "allowJs": true,
+    "jsx": "react-native",
+    "strict": false
+  },
+  "exclude": ["node_modules"]
+}
